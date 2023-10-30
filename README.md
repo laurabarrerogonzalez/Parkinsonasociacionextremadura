@@ -3,7 +3,15 @@
 </p>
 
 ## Project Description 🚀
+This Back-End project has been created to efficiently manage membership requests sent to the official email of the page. The system ensures effective recording and tracking of these requests, thereby facilitating the process of accepting or rejecting new volunteers, employees, or partners. 
 
+- **Request Logging**: The Back-End captures and securely stores all incoming membership requests, providing a centralized record of all received requests.
+
+- **Membership Management**: The system provides functionalities to review and evaluate candidate requests, enabling informed decisions regarding the acceptance or rejection of new volunteers, employees, or partners.
+
+- **Automated Notifications**: An automated notification system has been implemented to keep applicants informed about the status of their request throughout the review process.
+
+- **Security and Privacy**: Safeguarding the security and privacy of applicant data is a priority. Robust protection measures have been implemented to ensure the confidentiality of sensitive information.
 
 ## Screenshots (Coming Soon) 📷
 
