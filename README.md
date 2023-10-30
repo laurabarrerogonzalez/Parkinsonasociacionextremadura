@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Logo.png" width="200" height="auto">
+  <img src="images/LogoPar.png" width="200" height="auto">
 </p>
 
 ## Project Description 🚀
