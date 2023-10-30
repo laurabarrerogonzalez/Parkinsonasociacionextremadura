@@ -26,7 +26,7 @@
 <a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/csharp-original.svg" alt="C#" height="50" /></a>  
 <a href="https://www.mysql.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" height="50" /></a>  
 <a href="https://dotnet.microsoft.com/download" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/dotnetcore.png" alt=".Net Core" height="50" /></a>  
- <a href="https://swagger.io" target="_blank"><img style="margin: 10px" src="https://static1.smartbear.co/swagger/media/assets/images/swagger_logo.svg" alt="swagger" height="50" /></a>  
+<a href="https://swagger.io" target="_blank"><img style="margin: 10px" src="https://static1.smartbear.co/swagger/media/assets/images/swagger_logo.svg" alt="swagger" height="50" /></a>  
 </div>
 
 ## Methodology 📚
@@ -45,7 +45,7 @@
 <img src="" width="auto" height="400">
 
 ## Installation Process ⬆️
-1. Clone the GitHub repository: https://github.com/isabellozano37/MusicProject-BackEnd.
+1. Clone the GitHub repository: https://github.com/laurabarrerogonzalez/Parkinsonasociacionextremadura.
 2. Open the file using Microsoft Visual Studio 2022.
 3. Open View/Server Explorer and add the connection to your computer using SQL Server.
 4. In appsettings.json, add your SQL Server connection under "ServiceContext". Obtain information from properties.
@@ -85,9 +85,8 @@ appsettings.json is a configuration file in which various settings for the appli
 **6. Program: The place of connection between the API and Swagger.**
 The "Program" refers to the entry point of the application. In the context of an API, this is where the application is configured and started. Swagger is a tool that provides documentation and testing capabilities for APIs. In the "Program" file, the API may be configured to integrate with Swagger, allowing developers and users to easily explore and interact with the API's endpoints.
 
-## Next Steps 🔜
+## Next Steps (Coming Soon) 🔜
 
-Once we have linked our Front-End project (https://github.com/isabellozano37/music-projet), we want to continue improving our database by storing a greater variety of music and soundtracks, making our audio platform site more attractive, not only visually as mentioned earlier in the other repository, but also by providing a more comprehensive listening experience. Likewise, we will continue to work on maintaining our FullStack website to make it increasingly stable and dynamic, allowing us to maximize performance both for ourselves as administrators and for our customers.
 
 ## Authors 👨‍💻👩‍💻
 
