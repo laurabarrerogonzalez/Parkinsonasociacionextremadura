@@ -16,11 +16,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\Data\Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Data\Data.csproj" />
+    <Folder Include="Controllers\" />
+    <Folder Include="IServices\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
