@@ -15,22 +15,16 @@ namespace Data
     public class ServiceContext : DbContext
     {
         public ServiceContext(DbContextOptions<ServiceContext> options) : base(options) { }
-        public DbSet <ImageItem> Images { get; set; }
+
+        public DbSet<UsersItems> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<ImageItem>(entity =>
+            builder.Entity<UsersItems>(entity =>
             {
-                entity.ToTable("Images");
-                //entity.HasKey(i => i.IdImage);
+                entity.ToTable("Users");
             });
-
-
-
         }
-
-
-
     }
 }
 public class ServiceContextFactory : IDesignTimeDbContextFactory<ServiceContext>
