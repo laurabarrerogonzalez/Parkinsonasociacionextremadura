@@ -16,13 +16,23 @@ namespace Data
     {
         public ServiceContext(DbContextOptions<ServiceContext> options) : base(options) { }
 
-        public DbSet<UsersItems> Users { get; set; }
+        public DbSet<UsersItems> UsersItems { get; set; }
+        public DbSet<VolunteersItems> Volunteers { get; set; }
+        public DbSet<ShiftsItems> Shift { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<UsersItems>(entity =>
             {
                 entity.ToTable("Users");
+            });
+            builder.Entity<VolunteersItems>(entity =>
+            {
+                entity.ToTable("Volunteers");
+            });
+            builder.Entity<ShiftsItems>(entity =>
+            {
+                entity.ToTable("Shift");
             });
         }
     }
