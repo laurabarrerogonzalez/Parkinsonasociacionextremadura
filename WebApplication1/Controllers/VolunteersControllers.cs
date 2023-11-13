@@ -52,11 +52,11 @@ namespace WebApplicationParkinson.Controllers
             {
                 _serviceContext.Volunteers.Remove(Volunteers);
                 _serviceContext.SaveChanges();
-                return Ok("La cancion se ha eliminado correctamente.");
+                return Ok("La solicitud se ha eliminado correctamente.");
             }
             else
             {
-                return NotFound("no se ha encontrado la cancion con el identificador especificado.");
+                return NotFound("no se ha encontrado la solicitud con el identificador especificado.");
             }
         }
 
@@ -77,11 +77,11 @@ namespace WebApplicationParkinson.Controllers
                 Volunteers.TermsAccepted = updatedVolunteers.TermsAccepted;
 
                 _serviceContext.SaveChanges();
-                return Ok("La cancion se ha actualizado correctamente.");
+                return Ok("La solicitud se ha actualizado correctamente.");
             }
             else
             {
-                return NotFound("No se ha encontrado la cancion con el identificador especificado.");
+                return NotFound("No se ha encontrado la solicitud con el identificador especificado.");
             }
         }
 
