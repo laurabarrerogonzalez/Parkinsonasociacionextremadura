@@ -22,6 +22,8 @@ var base64Secret = Convert.ToBase64String(securityKey);
 
 builder.Services.AddScoped<IUsersService, UsersService>();
 builder.Services.AddScoped<IVolunteersService, VolunteersService>();
+builder.Services.AddScoped<IMembersServices, MembersServices>();
+
 
 builder.Services.AddDbContext<ServiceContext>(
 options =>

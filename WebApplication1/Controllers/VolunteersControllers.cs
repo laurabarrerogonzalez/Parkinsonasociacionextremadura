@@ -32,7 +32,7 @@ namespace WebApplicationParkinson.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Error al obtener el ID del rol: {ex.Message}");
+                return StatusCode(500, $"Error al insertar los datos del voluntario: {ex.Message}");
             }
         }
 
@@ -45,9 +45,9 @@ namespace WebApplicationParkinson.Controllers
         }
 
         [HttpDelete(Name = "DeleteVolunteers")]
-        public IActionResult DeleteVolunteers(string Name)
+        public IActionResult DeleteVolunteers(string name)
         {
-            var Volunteers = _serviceContext.Volunteers.FirstOrDefault(p => p.Name == Name);
+            var Volunteers = _serviceContext.Volunteers.FirstOrDefault(p => p.name == name);
             if (Volunteers != null)
             {
                 _serviceContext.Volunteers.Remove(Volunteers);
@@ -61,20 +61,19 @@ namespace WebApplicationParkinson.Controllers
         }
 
         [HttpPut(Name = "UpdateVolunteers")]
-        public IActionResult UpdateVolunteers(string Name, [FromBody] VolunteersItems updatedVolunteers)
+        public IActionResult UpdateVolunteers(string name, [FromBody] VolunteersItems updatedVolunteers)
         {
-            var Volunteers = _serviceContext.Volunteers.FirstOrDefault(p => p.Name == Name);
+            var Volunteers = _serviceContext.Volunteers.FirstOrDefault(p => p.name == name);
             if (Volunteers != null)
             {
-                Volunteers.Name = updatedVolunteers.Name;
-                Volunteers.Dni = updatedVolunteers.Dni;
-                Volunteers.Birthdate = updatedVolunteers.Birthdate;
-                Volunteers.Address = updatedVolunteers.Address;
-                Volunteers.Phone = updatedVolunteers.Phone;
-                Volunteers.Email = updatedVolunteers.Email;
-                Volunteers.Education = updatedVolunteers.Education;
-                Volunteers.Id_Shift = updatedVolunteers.Id_Shift;
-                Volunteers.TermsAccepted = updatedVolunteers.TermsAccepted;
+                Volunteers.name = updatedVolunteers.name;
+                Volunteers.dni = updatedVolunteers.dni;
+                Volunteers.birthdate = updatedVolunteers.birthdate;
+                Volunteers.address = updatedVolunteers.address;
+                Volunteers.phone = updatedVolunteers.phone;
+                Volunteers.email = updatedVolunteers.email;
+                Volunteers.education = updatedVolunteers.education;
+                Volunteers.shift = updatedVolunteers.shift;
 
                 _serviceContext.SaveChanges();
                 return Ok("La solicitud se ha actualizado correctamente.");
