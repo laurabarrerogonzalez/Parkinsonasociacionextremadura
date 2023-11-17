@@ -24,7 +24,7 @@ namespace Entities
         public string email { get; set; }
         public string iban { get; set; }
         public string holder { get; set; }
-        public List<ServicesItems> Services { get; set; }
+        public string services { get; set; }
         public string members { get; set; }
         public bool termsAccepted { get; set; }
     }

@@ -19,7 +19,6 @@ namespace Data
         public DbSet<UsersItems> UsersItems { get; set; }
         public DbSet<VolunteersItems> Volunteers { get; set; }
         public DbSet<MembersItems> Members { get; set; }
-        public DbSet<ServicesItems> Services { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -33,10 +32,7 @@ namespace Data
             });
             builder.Entity<MembersItems>(entity =>
             {
-                entity.ToTable("Members")
-                .HasMany(m => m.Services)
-                .WithMany()
-                .UsingEntity(j => j.ToTable("MemberServices"));
+                entity.ToTable("Members");
             });
         }
     }

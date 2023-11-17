@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(ServiceContext))]
-    [Migration("20231116112301_Initial")]
+    [Migration("20231117082104_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -68,29 +68,16 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("services")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("termsAccepted")
                         .HasColumnType("bit");
 
                     b.HasKey("Id_Members");
 
                     b.ToTable("Members", (string)null);
-                });
-
-            modelBuilder.Entity("Entities.ServicesItems", b =>
-                {
-                    b.Property<int>("Id_Service")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Service"));
-
-                    b.Property<string>("NameService")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id_Service");
-
-                    b.ToTable("Services");
                 });
 
             modelBuilder.Entity("Entities.UsersItems", b =>
@@ -160,36 +147,6 @@ namespace Data.Migrations
                     b.HasKey("Id_Volunteers");
 
                     b.ToTable("Volunteers", (string)null);
-                });
-
-            modelBuilder.Entity("MembersItemsServicesItems", b =>
-                {
-                    b.Property<int>("MembersItemsId_Members")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ServicesId_Service")
-                        .HasColumnType("int");
-
-                    b.HasKey("MembersItemsId_Members", "ServicesId_Service");
-
-                    b.HasIndex("ServicesId_Service");
-
-                    b.ToTable("MemberServices", (string)null);
-                });
-
-            modelBuilder.Entity("MembersItemsServicesItems", b =>
-                {
-                    b.HasOne("Entities.MembersItems", null)
-                        .WithMany()
-                        .HasForeignKey("MembersItemsId_Members")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Entities.ServicesItems", null)
-                        .WithMany()
-                        .HasForeignKey("ServicesId_Service")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
