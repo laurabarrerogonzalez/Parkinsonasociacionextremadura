@@ -10,6 +10,7 @@ using Entities;
 using System.Reflection.Emit;
 using Data;
 
+
 namespace Data
 {
     public class ServiceContext : DbContext
@@ -19,6 +20,8 @@ namespace Data
         public DbSet<UsersItems> UsersItems { get; set; }
         public DbSet<VolunteersItems> Volunteers { get; set; }
         public DbSet<MembersItems> Members { get; set; }
+        public DbSet<NewsItem> News { get; set; }
+       
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -34,6 +37,13 @@ namespace Data
             {
                 entity.ToTable("Members");
             });
+
+            builder.Entity<NewsItem>(entity =>
+            {
+                entity.ToTable("News");
+            });
+
+
         }
     }
 }
