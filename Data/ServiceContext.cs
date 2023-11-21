@@ -21,7 +21,11 @@ namespace Data
         public DbSet<VolunteersItems> Volunteers { get; set; }
         public DbSet<MembersItems> Members { get; set; }
         public DbSet<NewsItem> News { get; set; }
-       
+        public DbSet<Gallery1Item> Gallery1 { get; set; }
+        public DbSet<Gallery2Item> Gallery2 { get; set; }
+
+
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -41,6 +45,15 @@ namespace Data
             builder.Entity<NewsItem>(entity =>
             {
                 entity.ToTable("News");
+            });
+
+            builder.Entity<Gallery1Item>(entity =>
+            {
+                entity.ToTable("Gallery1");
+            });
+            builder.Entity<Gallery2Item>(entity =>
+            {
+                entity.ToTable("Gallery2");
             });
 
 

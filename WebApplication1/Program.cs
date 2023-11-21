@@ -1,4 +1,5 @@
 using Data;
+using Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using WebApplicationParkinson.IServices;
@@ -24,6 +25,12 @@ builder.Services.AddScoped<IUsersService, UsersService>();
 builder.Services.AddScoped<IVolunteersService, VolunteersService>();
 builder.Services.AddScoped<IMembersServices, MembersServices>();
 builder.Services.AddScoped<INewsService, NewsService>();
+builder.Services.AddScoped<IGallery1Service, Gallery1Service>();
+builder.Services.AddScoped<IGallery2Service, Gallery2Service>();
+
+
+
+
 
 
 builder.Services.AddDbContext<ServiceContext>(
