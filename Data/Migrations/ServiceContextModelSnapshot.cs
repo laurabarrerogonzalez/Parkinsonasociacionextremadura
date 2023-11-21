@@ -16,7 +16,7 @@ namespace Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.13")
+                .HasAnnotation("ProductVersion", "7.0.14")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -75,6 +75,27 @@ namespace Data.Migrations
                     b.HasKey("Id_Members");
 
                     b.ToTable("Members", (string)null);
+                });
+
+            modelBuilder.Entity("Entities.ResourcesItems", b =>
+                {
+                    b.Property<int>("Id_Resources")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Resources"));
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id_Resources");
+
+                    b.ToTable("Resources", (string)null);
                 });
 
             modelBuilder.Entity("Entities.UsersItems", b =>
@@ -144,6 +165,58 @@ namespace Data.Migrations
                     b.HasKey("Id_Volunteers");
 
                     b.ToTable("Volunteers", (string)null);
+                });
+
+            modelBuilder.Entity("Entities.WorkItems", b =>
+                {
+                    b.Property<int>("Id_Works")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Works"));
+
+                    b.Property<string>("archive")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("city")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("lastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("positions")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("province")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("termsAccepted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("zipcode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id_Works");
+
+                    b.ToTable("Works", (string)null);
                 });
 #pragma warning restore 612, 618
         }

@@ -34,6 +34,20 @@ namespace Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Resources",
+                columns: table => new
+                {
+                    Id_Resources = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    url = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Resources", x => x.Id_Resources);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
@@ -67,6 +81,28 @@ namespace Data.Migrations
                 {
                     table.PrimaryKey("PK_Volunteers", x => x.Id_Volunteers);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Works",
+                columns: table => new
+                {
+                    Id_Works = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    lastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    province = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    city = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    zipcode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    positions = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    archive = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    termsAccepted = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Works", x => x.Id_Works);
+                });
         }
 
         /// <inheritdoc />
@@ -76,10 +112,16 @@ namespace Data.Migrations
                 name: "Members");
 
             migrationBuilder.DropTable(
+                name: "Resources");
+
+            migrationBuilder.DropTable(
                 name: "Users");
 
             migrationBuilder.DropTable(
                 name: "Volunteers");
+
+            migrationBuilder.DropTable(
+                name: "Works");
         }
     }
 }
