@@ -13,9 +13,9 @@ This Back-End project has been created to efficiently manage membership requests
 
 - **Security and Privacy**: Safeguarding the security and privacy of applicant data is a priority. Robust protection measures have been implemented to ensure the confidentiality of sensitive information.
 
-## Screenshots (Coming Soon) 📷
+## Screenshots 📷
 
-<img src="" width="auto" height="200">
+<img src="images/Back1.png" width="auto" height="200"><img src="images/Back2.png" width="auto" height="200"><img src="images/Back3.png" width="auto" height="200"><img src="images/DiagramaBase.png" width="auto" height="200">
 
 ## Stacks 🖥️
 ● Microsoft Visual Studio 2022 <br>
