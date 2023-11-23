@@ -58,8 +58,7 @@ This Back-End project has been created to efficiently manage membership requests
 3. Open View/Server Explorer and add the connection to your computer using SQL Server.
 4. In appsettings.json, add your SQL Server connection under "ServiceContext". Obtain information from properties.
 5. Compile the code from Microsoft Visual Studio 2022.
-6. Create, modify, and delete content in Swagger.
-7. View the stored data in the SQL Server tables.
+6. Create, modify, and delete content.
 
 ## File Structure 📁
 **1. API or Database:**
