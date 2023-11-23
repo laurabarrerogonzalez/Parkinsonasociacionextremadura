@@ -3,15 +3,17 @@
 </p>
 
 ## Project Description 🚀
-This Back-End project has been created to efficiently manage membership requests sent to the official email of the page. The system ensures effective recording and tracking of these requests, thereby facilitating the process of accepting or rejecting new volunteers, employees, or partners. 
+This project involves the development of a database for the website of the Parkinson's Association of Extremadura. The project is implemented using C# in the BackEnd and includes the following features:
 
-- **Request Logging**: The Back-End captures and securely stores all incoming membership requests, providing a centralized record of all received requests.
+- The use of SQL Server for creating tables that will store data from various forms required for volunteers, members, and association staff.
 
-- **Membership Management**: The system provides functionalities to review and evaluate candidate requests, enabling informed decisions regarding the acceptance or rejection of new volunteers, employees, or partners.
+- The database is organized into multiple tables that store information about volunteer forms, member forms, and employee forms within the association.
 
-- **Automated Notifications**: An automated notification system has been implemented to keep applicants informed about the status of their request throughout the review process.
+- The website features sections for photo galleries, news, and resources and guidelines. In these sections, images from events, activities, news, and helpful books of the association can be viewed. To facilitate this, a table has been created that, when linked to the website, allows the administrator to insert, modify, and delete photos, news, or resources and guidelines as needed.
 
-- **Security and Privacy**: Safeguarding the security and privacy of applicant data is a priority. Robust protection measures have been implemented to ensure the confidentiality of sensitive information.
+- The system includes a login functionality that enables registered administrators to access the admin area, where they can perform various functions.
+
+This project will assist the Parkinson's Association of Extremadura in its efforts to provide better service to its members and the general public through its website with an included database.
 
 ## Screenshots 📷
 
