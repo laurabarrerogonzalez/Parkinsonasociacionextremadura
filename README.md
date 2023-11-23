@@ -93,8 +93,9 @@ appsettings.json is a configuration file in which various settings for the appli
 **6. Program: The place of connection between the API and Swagger.**
 The "Program" refers to the entry point of the application. In the context of an API, this is where the application is configured and started. Swagger is a tool that provides documentation and testing capabilities for APIs. In the "Program" file, the API may be configured to integrate with Swagger, allowing developers and users to easily explore and interact with the API's endpoints.
 
-## Next Steps (Coming Soon) 🔜
+## Next Steps 🔜
 
+In our exciting roadmap, thrilling enhancements await that will completely transform the experience. Picture receiving instant email notifications each time a new request comes through our forms, keeping you in the loop at all times. But that's not all! Soon, you'll have the ability to personalize the photos of our talented team and effortlessly tweak the information on our website to always showcase the latest and most exciting updates. And there's more! We're diligently working on implementing a payment gateway that will make transactions smoother than ever. Additionally, to ensure everyone is on the same page, we'll soon enable administrators to add crucial dates directly to the calendar. We're thrilled about the vibrant future ahead, and these enhancements are designed to make your life easier and our platform even more incredible!
 
 ## Authors 👨‍💻👩‍💻
 
