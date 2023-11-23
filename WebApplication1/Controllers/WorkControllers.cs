@@ -44,5 +44,21 @@ namespace WebApplicationParkinson.Controllers
             return Ok(Works);
 
         }
+
+        [HttpDelete(Name = "DeleteWorks")]
+        public IActionResult DeleteWorks(string name)
+        {
+            var Works = _serviceContext.Works.FirstOrDefault(p => p.name == name);
+            if (Works != null)
+            {
+                _serviceContext.Works.Remove(Works);
+                _serviceContext.SaveChanges();
+                return Ok("La solicitud se ha eliminado correctamente.");
+            }
+            else
+            {
+                return NotFound("no se ha encontrado la solicitud con el identificador especificado.");
+            }
+        }
     }
 }

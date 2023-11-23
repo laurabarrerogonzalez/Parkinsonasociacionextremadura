@@ -25,6 +25,9 @@ builder.Services.AddScoped<IVolunteersService, VolunteersService>();
 builder.Services.AddScoped<IMembersServices, MembersServices>();
 builder.Services.AddScoped<IWorkService, WorkService>();
 builder.Services.AddScoped<IResourcesServices, ResourcesServices>();
+builder.Services.AddScoped<INewsService, NewsService>();
+builder.Services.AddScoped<IGallery1Service, Gallery1Service>();
+builder.Services.AddScoped<IGallery2Service, Gallery2Service>();
 
 
 

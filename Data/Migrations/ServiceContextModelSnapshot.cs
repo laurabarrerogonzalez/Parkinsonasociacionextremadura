@@ -21,6 +21,40 @@ namespace Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Entities.Gallery1Item", b =>
+                {
+                    b.Property<int>("Id_gallery1")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_gallery1"));
+
+                    b.Property<string>("url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id_gallery1");
+
+                    b.ToTable("Gallery1", (string)null);
+                });
+
+            modelBuilder.Entity("Entities.Gallery2Item", b =>
+                {
+                    b.Property<int>("Id_gallery2")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_gallery2"));
+
+                    b.Property<string>("url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id_gallery2");
+
+                    b.ToTable("Gallery2", (string)null);
+                });
+
             modelBuilder.Entity("Entities.MembersItems", b =>
                 {
                     b.Property<int>("Id_Members")
@@ -75,6 +109,35 @@ namespace Data.Migrations
                     b.HasKey("Id_Members");
 
                     b.ToTable("Members", (string)null);
+                });
+
+            modelBuilder.Entity("Entities.NewsItem", b =>
+                {
+                    b.Property<int>("Id_News")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_News"));
+
+                    b.Property<string>("description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("link")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("thumbnail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id_News");
+
+                    b.ToTable("News", (string)null);
                 });
 
             modelBuilder.Entity("Entities.ResourcesItems", b =>
