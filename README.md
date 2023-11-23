@@ -48,9 +48,9 @@ This Back-End project has been created to efficiently manage membership requests
 - Independents: These are different branches where each team member develops their code according to assigned tasks for later merging into the Dev branch. It's an independent and/or testing branch. <br>
 + The branch methodology allows us to work collaboratively and maintain an organized and efficient workflow. Furthermore, working in branches allows us to work freely without conflicting with the work of other team members. Additionally, it provides us with greater control and a record or history of the various changes being made. On the other hand, for added security when merging codes from different branches, we have implemented security rules on GitHub where it is necessary to create a pull request prior to the merge.
 
-## Test Screenshot (Coming Soon) ✔️
+## Test Screenshot ✔️
 
-<img src="" width="auto" height="400">
+<img src="images/BackTest.png" width="auto" height="400">
 
 ## Installation Process ⬆️
 1. Clone the GitHub repository: https://github.com/laurabarrerogonzalez/Parkinsonasociacionextremadura.
